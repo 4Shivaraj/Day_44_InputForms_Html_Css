@@ -23,3 +23,12 @@ emailInput.addEventListener("input", function () {
   if (emailRegex.test(emailInput.value)) errorEmail.textContent = "";
   else errorEmail.textContent = "Invalid email";
 });
+
+// UC 3 : Mobile no validation
+const mobileInput = document.querySelector("#tel");
+const errorMobile = document.querySelector(".tel-error");
+mobileInput.addEventListener("input", function () {
+  let mobileRegex = RegExp("^[0-9]{2}[ ]*[0-9]{10}$");
+  if (mobileRegex.test(mobileInput.value)) errorMobile.textContent = " ";
+  else errorMobile.textContent = "Invalid number";
+});
