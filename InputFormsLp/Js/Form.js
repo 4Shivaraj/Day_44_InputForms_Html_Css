@@ -32,3 +32,14 @@ mobileInput.addEventListener("input", function () {
   if (mobileRegex.test(mobileInput.value)) errorMobile.textContent = " ";
   else errorMobile.textContent = "Invalid number";
 });
+
+// UC 4 : Password Rule1-5
+const password = document.querySelector("#pwd");
+const errorPwd = document.querySelector(".pwd-error");
+password.addEventListener("input", function () {
+  let pwdRegex = RegExp(
+    "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
+  );
+  if (pwdRegex.test(password.value)) errorPwd.textContent = "";
+  else errorPwd.textContent = "Invalid Password";
+});
