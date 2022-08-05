@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--linking External Js To Html-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=HT, initial-scale=1.0" />
+    <title>Html5 Input Form</title>
+    <!--linking External Css To Html-->
+    <link href="../Css/Form.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form>
+      <header class="headerContainer">
+        <h1>HTML 5 Form Input Fields</h1>
+      </header>
+      <div>
+        <!-- In order to provide a relation between the label and text box we can use for attributes -->
+        <label for="text">Text input type for name:</label>
+        <input type="text" id="text" name="text" />
+        <error-output class="text-error" for="text"></error-output>
+      </div>
+      <div>
+        <label for="pwd">Password input type:</label>
+        <input type="password" id="pwd" name="pwd" />
+      </div>
+      <div>
+        <label for="email"> Email input type:</label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div>
+        <label for="url">Url input type:</label>
+        <input type="url" id="url" name="url" />
+      </div>
+      <div>
+        <label for="number">Number input type:</label>
+        <input type="number" id="number" name="number" />
+      </div>
+      <div>
+        <label for="tel">Tel input type: </label>
+        <input type="tel" id="tel" name="tel" />
+      </div>
+      <div>
+        <label for="search"> Search input type:</label>
+        <input type="search" id="search" name="search" />
+      </div>
+      <div class="nativeDateTimePicker">
+        <label for="party"> Choose a date and time:</label>
+        <input type="datetime-local" id="party" name="bday" />
+        <span class="validity"></span>
+      </div>
+      <div>
+        <label for="salary"> Choose your salary: </label>
+        <input
+          type="range"
+          name="salary"
+          id="salary"
+          min="300000"
+          max="500000"
+          step="100"
+          value="400000"
+        />
+        <output class="salary-output" for="salary">400000</output>
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
+    <!--linking External Js To Html-->
+    <script src="../Js/Form.js"></script>
+  </body>
+</html>
